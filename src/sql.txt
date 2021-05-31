@@ -1,0 +1,17 @@
+CREATE TABLE `pro_op_daily` (
+  `id` int(12) NOT NULL AUTO_INCREMENT COMMENT '主键 id',
+  `pid` int(2) DEFAULT NULL COMMENT '序号',
+  `indicators` varchar(32) DEFAULT NULL COMMENT '指标',
+  `plan_day` varchar(32) DEFAULT NULL COMMENT '计划日均',
+  `plan_month` varchar(32) DEFAULT NULL COMMENT '计划月度',
+  `com_day` varchar(32) DEFAULT NULL COMMENT '完成当日',
+  `com_month` varchar(32) DEFAULT NULL COMMENT '完成月累计',
+  `more_day` varchar(32) DEFAULT NULL COMMENT '超欠日均',
+  `more_month` varchar(32) DEFAULT NULL COMMENT '超欠月度',
+  `remark` varchar(255) DEFAULT NULL COMMENT '描述',
+  `create_time` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+  `update_time` timestamp NULL DEFAULT NULL COMMENT '修改时间',
+  `import_date` varchar(32) DEFAULT NULL COMMENT '导入日期',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='生产运行日报表 1-生产/销售/进出口指标';
+
